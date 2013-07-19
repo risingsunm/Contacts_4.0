@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dip">
+    <!--Begin: Modified by siliangqi for associate_dial 2012-6-1-->
+    <LinearLayout
+        android:id="@+id/searchResult_setNumber"
+        android:background="@drawable/associate_dial_select_bg"
+        android:layout_width="320dip"
+        android:layout_height="64dip">
+        <ImageView
+        android:id="@+id/searchResult_photo"
+        android:layout_width="47dip"
+        android:layout_height="47dip"
+        android:layout_marginLeft="8dip"
+        android:layout_gravity="center_vertical"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/searchResult_displayname"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="35px"/>
+        <TextView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/searchResult_number"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="35px"/>
+    </LinearLayout>
+    </LinearLayout>
+    <!--End: Modified by siliangqi for associate_dial 2012-6-1-->
+</LinearLayout>

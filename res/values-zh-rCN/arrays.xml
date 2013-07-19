@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- Begin: Modified by xiepengfei for add calls view by 2012/05/26 -->
+<string-array name="calls_view_by">
+        <item>所有记录</item>
+        <item>所有已接</item>
+        <item>所有拨出</item>
+        <item>所有未接</item>
+
+        <item>G网记录</item>
+        <item>G网已接</item>
+        <item>G网拨出</item>
+        <item>G网未接</item>
+
+        <item>C网记录</item>
+        <item>C网已接</item>
+        <item>C网拨出</item>
+        <item>C网未接</item>
+    </string-array>
+<!-- End: Modified by xiepengfei for add calls view by 2012/05/26 -->
+
+</resources>

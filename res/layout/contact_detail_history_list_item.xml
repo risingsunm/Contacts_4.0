@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The file Added by xiepengfei for list item 2012/05/18 -->
+<!-- The file Modified by bxinchun 2012-08-10 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/call_log_list_item_bg"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:padding="8dip" >
+
+    <!-- Begin: Modified by xiepengfei for modify height 2012/05/23 -->
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        <!-- End: Modified by xiepengfei for modify height 2012/05/23 -->
+
+        <!-- Begin: Modified by xiepengfei for modify view width and height 2012/06/01 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/contact_detail_call_log_item_imageview_left"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="8dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/contact_detail_call_log_item_textview_content"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/contact_list_content_color"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/contact_detail_call_log_item_imageview_right"
+                    android:layout_width="32px"
+                    android:layout_height="32px"
+                    android:layout_marginLeft="2dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/contact_detail_call_log_item_textview_number"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/contact_list_number_color"
+                    android:textSize="16sp" />
+<!--                android:layout_alignRight="@+id/contact_detail_call_log_item_imageview_right"
+ -->
+
+                <TextView
+                    android:id="@+id/contact_detail_call_log_item_textview_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:textColor="@color/contact_list_time_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- End: Modified by xiepengfei for modify view width and height 2012/06/01 -->
+    </LinearLayout>
+
+    <!-- Begin: Modified by xiepengfei for modify height 2012/05/23 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical" >
+        <!-- End: Modified by xiepengfei for modify height 2012/05/23 -->
+
+        <CheckBox
+            android:id="@+id/contact_detail_call_log_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
+

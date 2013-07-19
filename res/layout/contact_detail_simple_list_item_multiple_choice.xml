@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for list multiple mode 2012/05/18 -->
+
+<!-- Begin: Modified by xiepengfei for modify the background 2012/05/22 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/call_log_list_item_bg">
+<!-- End: Modified by xiepengfei for modify the background 2012/05/22 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="64dip" >
+<!-- Begin: Modified by xiepengfei for modify the text size 2012/05/22 -->
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:layout_marginLeft="13dip"
+            android:layout_centerVertical="true"
+            android:textColor="@color/contact_list_separator_text_color"
+            />
+<!-- End: Modified by xiepengfei for modify the text size 2012/05/22 -->
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+<!-- End: Modified by xiepengfei for list multiple mode 2012/05/18 -->

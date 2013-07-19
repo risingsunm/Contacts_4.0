@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dialpad_horizontal_margin"
+    android:paddingRight="@dimen/dialpad_horizontal_margin">
+
+    <!-- Text field and possibly soft menu button above the keypad where
+         the digits are displayed. -->
+    <!--Start of siliangqi on 2012-3-12 9:0 dial_bg-->
+    <!--
+    <LinearLayout
+        android:id="@+id/digits_container"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="@integer/dialpad_layout_weight_digits"
+        android:layout_marginTop="@dimen/dialpad_vertical_margin"
+        android:gravity="center"
+        android:background="@drawable/dialpad_background" >
+    -->
+        <!--Start of siliangqi on 2012-3-12 9:0 dialpad forcus bug-->
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+        <!--End of siliangqi on 2012-3-12 9:0 dialpad forcus bug-->
+        <LinearLayout
+        android:id="@+id/digits_container"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.200"
+        android:layout_marginTop="@dimen/dialpad_vertical_margin"
+        android:background="#000000">
+    <!--End of siliangqi on 2012-3-12 9:0 dial_bg-->
+    <!--Start of siliangqi on 2012-3-16 9:39 dial_bg-->
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+    <LinearLayout
+         android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+        <!--
+        <com.android.contacts.dialpad.DigitsEditText
+            android:id="@+id/digits"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="@style/DialtactsDigitsTextAppearance"
+            android:textColor="?android:attr/textColorPrimary"
+            android:nextFocusRight="@+id/overflow_menu"
+            android:background="@android:color/transparent" />
+        -->
+        <com.android.contacts.dialpad.DigitsEditText
+            android:id="@+id/digits"
+            android:layout_width="0dip"
+            android:singleLine="true"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textAppearance="@style/DialtactsDigitsTextAppearance"
+            android:textColor="?android:attr/textColorPrimary"
+            android:nextFocusRight="@+id/overflow_menu"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="66dip"
+            android:layout_height="53dip"
+            android:layout_marginRight="2dip"
+            android:src="@drawable/ic_dial_action_delete1"
+            android:background="@drawable/call_dial_btn_bg"/>
+    </LinearLayout>
+        <!--Begin: Modified by siliangqi for associate_dial 2012-5-28-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/addNew"
+            android:clickable="true"
+            android:visibility="gone"
+            android:background="@drawable/call_add_dialpad"
+            android:layout_width="fill_parent"
+            android:layout_height="64dip">
+        <ImageView
+            android:layout_width="33dip"
+            android:layout_height="33dip"
+            android:layout_marginLeft="70dip"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/call_add_white" />
+        <TextView
+            android:layout_marginLeft="10dip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="35px"
+            android:text="@string/activity_title_confirm_add_detail" />
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/searchResult"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:layout_height="64dip">
+        <LinearLayout
+        android:id="@+id/searchResult_setNumber"
+        android:clickable="true"
+        android:background="@drawable/call_add_dialpad"
+        android:layout_width="260dip"
+        android:layout_height="match_parent">
+        <ImageView
+        android:id="@+id/searchResult_photo"
+        android:layout_width="47dip"
+        android:layout_height="47dip"
+        android:layout_marginLeft="8dip"
+        android:layout_gravity="center_vertical"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/searchResult_displayname"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center_vertical"
+        android:textColor="#ffffff"
+        android:textSize="35px"
+        android:text="@string/activity_title_confirm_add_detail" />
+        <TextView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/searchResult_number"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center_vertical"
+        android:textColor="#ffffff"
+        android:textSize="35px"
+        android:text="@string/activity_title_confirm_add_detail" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/searchResult_displayall"
+        android:clickable="true"
+        android:background="@drawable/call_add_dialpad2"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+     <TextView
+         android:id="@+id/searchResult_count"
+         android:layout_width="match_parent"
+         android:gravity="center_horizontal|bottom"
+         android:layout_height="34dip"
+         android:textSize="26px"
+         android:textColor="#ffffff"
+         android:text="@string/activity_title_confirm_add_detail" />
+     <ImageView
+        android:layout_width="16dip"
+        android:layout_height="12dip"
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/call_dial_more" />
+    </LinearLayout>
+    </LinearLayout>
+        </LinearLayout>
+        <!--End: Modified by siliangqi for associate_dial 2012-5-28-->
+        </LinearLayout>
+        <!--End of siliangqi on 2012-3-16 9:39 dial_bg-->
+        <ImageButton
+            android:id="@+id/overflow_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="bottom|center_horizontal"
+            android:src="@drawable/ic_menu_overflow"
+            android:contentDescription="@*android:string/action_menu_overflow_description"
+            android:nextFocusLeft="@id/digits"
+            android:background="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <!-- Keypad section -->
+    <include layout="@layout/dialpad" />
+
+    <!--Start of siliangqi on 2012-3-15 14:24 dial_bg-->
+    <!--<View
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dialpad_vertical_margin"
+       android:background="#66000000"/>-->
+       <!-- Horizontal row of buttons (Search + DialButton + Delete.) -->
+       <include layout="@layout/dialpad_additional_buttons" />
+    <!--End of siliangqi on 2012-3-15 14:24 dial_bg-->
+    <!-- "Dialpad chooser" UI, shown only when the user brings up the
+         Dialer while a call is already in progress.
+         When this UI is visible, the other Dialer elements
+         (the textfield/button and the dialpad) are hidden. -->
+    <ListView android:id="@+id/dialpadChooser"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_weight="1"
+    />
+
+</LinearLayout>

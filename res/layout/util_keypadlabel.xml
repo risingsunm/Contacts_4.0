@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Start of wangqiang on 2012-3-6 11:30 contact_and_dialer_actionbar-->
+<!--Begin: Modified by siliangqi for actionbar_font 2012-6-8-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:src="@drawable/phonebook_tab_icon_keypad"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        style="@style/actionbar_tab_text_style"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/dialerIconLabel"/>
+</LinearLayout>
+<!--End: Modified by siliangqi for actionbar_font 2012-6-8-->
+<!--End of wangqiang on 2012-3-6 11:30 contact_and_dialer_actionbar-->

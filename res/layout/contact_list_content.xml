@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- android:paddingTop is used instead of android:layout_marginTop. It looks
+     android:layout_marginTop is ignored when used with <fragment></fragment>, which
+     only happens in Tablet UI since we rely on ViewPager in Phone UI.
+     Instead, android:layout_marginTop inside <fragment /> is effective. -->
+
+<!--Begin: Modified by siliangqi for wordindex 2012-5-4-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ahong ="http://schemas.android.com/apk/res/com.android.contacts"
+    android:id="@+id/pinned_header_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/contact_browser_background" >
+    <LinearLayout
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    <!--End: Modified by siliangqi for wordindex 2012-5-4-->
+
+    <!-- Begin: Modified by siliangqi for 1lev_search 2012-4-10 -->
+    <LinearLayout
+        android:id="@+id/linear_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@drawable/linear_search_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!--Begin: Modified by siliangqi for menu_icon 2011-6-6-->
+        <ImageButton
+            android:id="@+id/imageButton_search"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/call_add_bg"
+            android:src="@drawable/call_add" />
+        <!--End: Modified by siliangqi for menu_icon 2011-6-6-->
+            <com.android.contacts.list.EditText_Search
+                android:id="@+id/editText_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:hint="@string/search_bar_hint"
+                android:layout_marginLeft="13dip"
+                android:layout_marginRight="13dip"
+                android:background="@drawable/search_bg"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:drawableRight="@drawable/image_search"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp" />
+    </LinearLayout>
+    <!-- End: Modified by siliangqi for 1lev_search 2012-4-10 -->
+
+    <!-- Shown only when an Account filter is set.
+         - paddingTop should be here to show "shade" effect correctly. -->
+    <include
+        android:id="@+id/account_filter_header_container"
+        layout="@layout/account_filter_header" />
+
+    <!--Begin: Modified by siliangqi for contacts_bg 2012-5-26-->
+    <!--<view
+        class="com.android.contacts.widget.PinnedHeaderListView"
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="?attr/contact_browser_list_padding_left"
+        android:layout_marginRight="?attr/contact_browser_list_padding_right"
+        android:fastScrollEnabled="true"
+        android:fadingEdge="none"
+        android:layout_weight="1" />-->
+        <view
+        class="com.android.contacts.widget.PinnedHeaderListView"
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:fastScrollEnabled="true"
+        android:fadingEdge="none"
+        android:layout_weight="1" />
+    <!--End: Modified by siliangqi for contacts_bg 2012-5-26-->
+
+   <ViewStub
+       android:id="@+id/footer_stub"
+       android:layout="@layout/footer_panel"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" />
+    <!--Begin: Modified by siliangqi for wordindex 2012-5-4-->
+    </LinearLayout>
+    <com.android.contacts.widget.BladeView
+       android:layout_gravity="right"
+       android:id="@+id/category" android:layout_width="20dip"
+       android:layout_height="fill_parent" android:layout_alignParentRight="true"
+       ahong:bladeIndicatorHeight="@dimen/blade_list_indicator_height"
+       ahong:fullSectionsId="@+array/blade_full_sections"
+       ahong:replacedSectionsId="@+array/blade_replaced_sections"
+       ahong:sectionBaselinesId="@+array/blade_section_baselines"
+       ahong:indicatorTopsId="@+array/blade_indicator_tops"
+       ahong:enableSectionColor="#ffffff"
+       ahong:disableSectionColor="#6c6c6c"
+       ahong:sectionFontSize="@dimen/blade_list_sectionFontSize"
+       ahong:bladeIndicatorWidth="@dimen/blade_list_indicator_width"
+       ahong:promptVertOffset="40dip">
+    </com.android.contacts.widget.BladeView>
+</FrameLayout>
+    <!--End: Modified by siliangqi for wordindex 2012-5-4-->

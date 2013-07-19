@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for checkbox 2012/03/31 -->
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_detail_list_options_fragment_listview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+</ListView>
+<!-- End: Modified by xiepengfei checkbox 2012/03/31-->

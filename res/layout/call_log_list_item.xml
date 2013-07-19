@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2012, Code Aurora Forum. All rights reserved.
+     Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!--Start of siliangqi on 2012-2-27 15:55 call_log_bg-->
+<!--<view
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.android.contacts.calllog.CallLogListItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+>-->
+<view
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.android.contacts.calllog.CallLogListItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#000000"
+>
+<!--End of siliangqi on 2012-2-27 15:55 call_log_bg-->
+    <!--
+        This layout may represent either a call log item or one of the
+        headers in the call log.
+
+        The former will make the @id/call_log_item visible and the
+        @id/call_log_header gone.
+
+        The latter will make the @id/call_log_header visible and the
+        @id/call_log_item gone
+    -->
+
+    <!--Begin: Modified by sunrise for CalllogGroupByDate 2012-4-05 11:48-->
+    <TextView style="@style/ContactListSeparatorTextViewStyle"
+        android:id="@+id/call_log_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="?attr/call_log_header_color"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:paddingLeft="@dimen/contact_browser_list_item_text_indent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="end"
+        android:background="#182c42"
+        android:singleLine="true" />
+    <!--End: Modified by sunrise for CalllogGroupByDate 2012-4-05 11:48-->
+
+        <!--Start of siliangqi on 2012-2-27 14:25 call_log_bg-->
+        <!--<LinearLayout
+            android:id="@+id/primary_action_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/call_log_outer_margin"
+            android:layout_marginRight="@dimen/call_log_outer_margin"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:nextFocusRight="@+id/secondary_action_icon"
+            android:nextFocusLeft="@+id/quick_contact_photo"
+        >-->
+        <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+        <LinearLayout
+            android:id="@+id/primary_action_view"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/call_log_list_item_bg"
+            android:focusable="true"
+            android:nextFocusRight="@+id/secondary_action_icon"
+            android:nextFocusLeft="@+id/quick_contact_photo"
+        >
+        <!--End: Modified by siliangqi for list_height 2012-4-18-->
+        <!--<QuickContactBadge
+                android:id="@+id/quick_contact_photo"
+                android:layout_width="@dimen/call_log_list_contact_photo_size"
+                android:layout_height="@dimen/call_log_list_contact_photo_size"
+                android:nextFocusRight="@id/primary_action_view"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:layout_marginLeft="@dimen/call_log_outer_margin"
+            />-->
+            <!-- Begin: Modified by sunrise for CallLogFine 2012/07/27 -->
+            <QuickContactBadge
+                android:id="@+id/quick_contact_photo"
+                android:layout_width="@dimen/call_log_list_contact_photo_size"
+                android:layout_height="@dimen/call_log_list_contact_photo_size"
+                android:nextFocusRight="@id/primary_action_view"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:layout_marginLeft="@dimen/call_log_icon_margin"
+            />
+            <!-- End: Modified by sunrise for CallLogFine 2012/07/27 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/call_log_inner_margin"
+                android:paddingBottom="@dimen/call_log_inner_margin"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/call_log_inner_margin"
+            >
+            <!--End of siliangqi on 2012-2-27 14:25 call_log_bg-->
+            <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                >
+            <!--End: Modified by siliangqi for list_height 2012-4-18-->
+                <!--Begin: Modified by siliangqi for call_log_bg 2012-5-28-->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#c8c8c8"
+                    android:textSize="33px"
+                    android:singleLine="true"
+                />
+                <!--End: Modified by siliangqi for call_log_bg 2012-5-28-->
+                <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+                <TextView
+                        android:id="@+id/callCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/call_log_secondary_text_color"
+                        android:textSize="24px"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                    />
+                </LinearLayout>
+                <!--<TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/call_log_secondary_text_color"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                />-->
+                <!--End: Modified by siliangqi for list_height 2012-4-18-->
+                <LinearLayout
+                    android:id="@+id/call_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                >
+                    <!--Begin: Modified by siliangqi for call_log_bg 2012-5-28-->
+                    <!-- Begin: Modified by sunrise for CallLogFine 2012/07/27 -->
+                    <!--
+                    <view
+                        class="com.android.contacts.calllog.CallTypeIconsView"
+                        android:id="@+id/call_type_icons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/call_log_icon_margin"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="3dip"
+                    />
+                    -->
+                    <view
+                        class="com.android.contacts.calllog.CallTypeIconsView"
+                        android:id="@+id/call_type_icons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="3dip"
+                    />
+                    <!--End: Modified by siliangqi for call_log_bg 2012-5-28-->
+                    <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+                    <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#31b6e7"
+                    android:textSize="24px"
+                    android:singleLine="true"
+                    android:layout_marginRight="@dimen/call_log_icon_margin"
+                 />
+                    <!-- End: Modified by sunrise for CallLogFine 2012/07/27 -->
+                    <!--End: Modified by siliangqi for list_height 2012-4-18-->
+                    <!--Begin: Modified by siliangqi for location_search 2012-4-24-->
+                    <TextView
+                    android:id="@+id/location_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="?attr/call_log_secondary_text_color"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    />
+                    <!--End: Modified by siliangqi for location_search 2012-4-24-->
+                    <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+                    <!--<TextView
+                        android:id="@+id/call_count_and_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?attr/call_log_secondary_text_color"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                    />-->
+                    <!--End: Modified by siliangqi for list_height 2012-4-18-->
+                </LinearLayout>
+            </LinearLayout>
+            <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+            <!-- Begin: Modified by sunrise for CallLogFine 2012/07/27 -->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/call_log_icon_margin"
+                    android:paddingTop="@dimen/call_log_inner_margin"
+                    android:paddingBottom="@dimen/call_log_inner_margin"
+                >
+            <!-- End: Modified by sunrise for CallLogFine 2012/07/27 -->
+            <!--End: Modified by siliangqi for list_height 2012-4-18-->
+            <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                >
+            <!--End: Modified by siliangqi for list_height 2012-4-18-->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1px"
+                android:layout_height="@dimen/call_log_call_action_size"
+                android:background="@drawable/ic_divider_dashed_holo_dark"
+                android:layout_gravity="center_vertical"
+            />
+            <!--Begin: Modified by siliangqi for call_log_bg 2012-5-28-->
+            <ImageButton
+                android:id="@+id/secondary_action_icon"
+                android:layout_width="@dimen/call_log_call_action_width"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/call_log_inner_margin"
+                android:paddingTop="@dimen/call_log_inner_margin"
+                android:paddingBottom="@dimen/call_log_inner_margin"
+                android:paddingRight="@dimen/call_log_inner_margin"
+                android:scaleType="center"
+                android:visibility="gone"
+                android:background="?android:attr/selectableItemBackground"
+                android:nextFocusLeft="@id/primary_action_view"
+            />
+            <TextView
+                android:id="@+id/subscription"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:textColor="?attr/call_log_secondary_text_color"
+                android:textSize="24px"
+                android:singleLine="true"
+                android:layout_weight="1"
+            />
+            <!--End: Modified by siliangqi for call_log_bg 2012-5-28-->
+            <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+                </LinearLayout>
+            <TextView
+                android:id="@+id/call_count_and_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="#666666"
+                android:textSize="20px"
+                android:singleLine="true"
+            />
+            </LinearLayout>
+            <!--End: Modified by siliangqi for list_height 2012-4-18-->
+            <!--Begin: Modified by siliangqi for multi_delete 2012-3-22-->
+            <CheckBox
+            android:id="@+id/checkBox_delete"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <!--End: Modified by siliangqi for multi_delete 2012-3-22-->
+        </LinearLayout>
+    <!--Begin: Modified by sunrise for CalllogGroupByDate on 2012-4-05 11:48-->
+    <!--
+    <TextView
+        android:id="@+id/call_log_header"
+        style="@style/ContactListSeparatorTextViewStyle"
+        android:layout_marginLeft="@dimen/call_log_outer_margin"
+        android:layout_marginRight="@dimen/call_log_outer_margin"
+        android:paddingTop="@dimen/call_log_inner_margin"
+        android:paddingBottom="@dimen/call_log_inner_margin" />
+    -->
+    <!--End: Modified by sunrise for CalllogGroupByDate on 2012-4-05 11:48-->
+    <!-- Begin: Modified by sunrise for CallLogFine 2012/07/27 -->
+    <!--
+    <View
+        android:id="@+id/call_log_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/call_log_outer_margin"
+        android:layout_marginRight="@dimen/call_log_outer_margin"
+        android:background="#55ffffff"
+    />
+    -->
+    <View
+        android:id="@+id/call_log_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#55ffffff"
+    />
+    <!-- End: Modified by sunrise for CallLogFine 2012/07/27 -->
+</view>

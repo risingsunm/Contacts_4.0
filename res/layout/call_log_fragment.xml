@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2012, Code Aurora Forum. All rights reserved. 
+     Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Layout parameters are set programmatically. -->
+<!--Start of siliangqi on 2012-3-14 10:0 detailed_contacts_bg-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="?android:attr/actionBarSize"
+    android:divider="?android:attr/dividerHorizontal"
+    android:showDividers="end">-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:divider="?android:attr/dividerHorizontal"
+    android:showDividers="end">
+    <LinearLayout
+        android:id="@+id/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/ic_actionbar_bg"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+    <LinearLayout
+        android:id="@+id/actionbar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:clickable="true"
+        android:background="@drawable/actionbar_button"
+        android:orientation="horizontal" >
+     <ImageView
+            android:layout_width="14dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow" />
+     <ImageView
+            android:layout_width="32dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher_phone" />
+    </LinearLayout>
+     <TextView
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="21dip"
+            android:textColor="#ffffff"
+            android:text="@string/menu_deleteContact" />
+    </LinearLayout>
+ <!--End of siliangqi on 2012-3-14 10:0 detailed_contacts_bg-->
+    <FrameLayout
+        android:id="@+id/voicemail_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <!--Start: Modified by siliangqi for multi_delete 2012-4-19-->
+        <!--<include layout="@layout/call_log_voicemail_status"/>-->
+        <!--End: Modified by siliangqi for multi_delete 2012-4-19-->
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!-- Begin: Modified by xiepengfei for gone the calltype view 2012/05/26 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone">
+<!-- End: Modified by xiepengfei for gone the calltype view 2012/05/26 -->
+            <LinearLayout
+                android:id="@+id/slot_select_container"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+                <View
+                    android:layout_width="20dip"
+                    android:layout_weight="0"
+                    android:layout_height="0dip"/>
+
+                <ImageView
+                    android:id="@+id/slot_list"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_tab_sim1"
+                    android:gravity="center_vertical|left"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/slot_select"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:background="@drawable/ic_tab_sim_select" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_weight="0"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dip"
+                    android:layout_marginBottom="3dip"
+                    android:background="@drawable/divider_vertical_dark"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:gravity="center_vertical"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/call_all"
+                    android:checked="true"
+                    android:drawableTop="@drawable/ic_tab_call_all"
+                    style="@style/call_log_tab_bottom"/>
+
+                <RadioButton
+                    android:id="@+id/call_in"
+                    android:drawableTop="@drawable/ic_tab_call_in"
+                    style="@style/call_log_tab_bottom"/>
+
+                <RadioButton
+                    android:id="@+id/call_out"
+                    android:drawableTop="@drawable/ic_tab_call_outgoing"
+                    style="@style/call_log_tab_bottom"/>
+
+                <RadioButton
+                    android:id="@+id/call_miss"
+                    android:drawableTop="@drawable/ic_tab_call_miss"
+                    style="@style/call_log_tab_bottom"/>
+            </RadioGroup>
+        </LinearLayout>
+
+    <!--Begin: Modified by siliangqi for multi_delete 2012-3-23 -->
+    <!--<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" > -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+        <!-- <LinearLayout android:layout_width="match_parent"
+            android:layout_height="80dip" android:orientation="horizontal"
+            android:visibility="gone" android:background="@drawable/call_log_delete_all"
+            android:id="@+id/linear_delete_all">-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="64dip" android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" android:background="@drawable/call_log_delete_all"
+            android:id="@+id/linear_delete_all">
+            <!-- <TextView android:layout_weight="1"
+                android:layout_marginLeft="20dip" android:text="@string/select_all"
+                android:gravity="center_vertical" android:textSize="20sp"
+                android:layout_width="match_parent" android:layout_height="80dip" />-->
+            <TextView android:layout_weight="1"
+                android:layout_marginLeft="20dip" android:text="@string/select_my_all"
+                android:gravity="center_vertical" android:textSize="29px"
+                android:layout_width="match_parent" android:layout_height="match_parent" />
+        <!--End: Modified by siliangqi for list_height 2012-4-18-->
+            <CheckBox android:id="@+id/checkbox_delete_all"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--<ListView android:id="@android:id/list" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:fadingEdge="none" android:scrollbarStyle="outsideOverlay"
+            android:divider="@null" /> -->
+        <!-- Begin: Modified by sunrise for empty hint 2012-7-26 -->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- Begin: Modified by sunrise for scroll bar unique 2012-7-30 -->
+            <!--
+            <ListView android:id="@android:id/list"
+                android:layout_width="match_parent"android:layout_height="match_parent"
+                android:fadingEdge="none" android:layout_weight="1"
+                android:scrollbarStyle="outsideOverlay" android:divider="@null" />
+            -->
+            <!-- Begin: Modified by bxinchun, change the ListView to TouchView 2012-07-31 -->
+            <!-- <ListView -->
+            <!-- Begin: Modified by bxinchun, change the ListView to TouchView 2012-07-31 -->
+            <com.android.contacts.widget.TouchListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:divider="@null" />
+            <!-- Begin: Modified by sunrise for scroll bar unique 2012-7-30 -->
+            <TextView android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/noitems_text_based"
+                android:text="@string/recentCalls_empty"
+                android:gravity="center"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        </LinearLayout>
+        <!-- End: Modified by sunrise for empty hint 2012-7-26 -->
+
+        <!--Begin: Modified by siliangqi for list_height 2012-4-18-->
+        <!-- <LinearLayout android:visibility="gone" android:id="@+id/linear_del_conf"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/call_log_delete_all_normal"
+            android:orientation="horizontal">-->
+        <LinearLayout android:visibility="gone" android:id="@+id/linear_del_conf"
+            android:layout_width="match_parent" android:layout_height="55dip"
+            android:background="@color/call_log_delete_all_normal"
+            android:orientation="horizontal">
+        <!--End: Modified by siliangqi for list_height 2012-4-18-->
+
+        <include layout="@layout/bottom_toolbar" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--End: Modified by siliangqi for multi_delete 2012-3-23 -->
+        />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

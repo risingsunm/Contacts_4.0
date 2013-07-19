@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:id="@+id/qrd_tools"
+        android:title="@string/qrdtools_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.qualcomm.qrdtools"
+            android:targetClass="com.qualcomm.qrdtools.activity.MainUI" />
+    </header>
+
+    <header
+        android:id="@+id/log_kit"
+        android:title="@string/logkit_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.qualcomm.stats"
+            android:targetClass="com.qualcomm.stats.MainItems" />
+    </header>
+
+    <header
+        android:id="@+id/factorykit"
+        android:title="@string/factorykit_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.qualcomm.factory"
+            android:targetClass="com.qualcomm.factory.ControlCenter.ControlCenter" />
+    </header>
+
+</preference-headers>

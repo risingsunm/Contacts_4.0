@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Use LinearLayout + FrameLayout, just to rely on android:divider and android:showDividers -->
+<!-- Start of siliangqi on 2012-3-12 9:0 dial_bg -->
+<!--
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="?android:attr/actionBarSize"
+    android:divider="?android:attr/dividerHorizontal"
+    android:showDividers="end">
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="vertical"
+    android:showDividers="end" >
+
+    <!-- End of siliangqi on 2012-3-12 9:0 dial_bg -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- Begin: Modified by wqiang for ClickFavorite_to_Contact 2012/08/03 -->
+
+        <!-- Begin: Modified by bxinchun, change the ListView to TouchView 2012-07-31 -->
+        <!-- <ListView -->
+        <!-- Begin: Modified by bxinchun, change the ListView to TouchView 2012-07-31 -->
+        <com.android.contacts.widget.TouchListView
+            android:id="@+id/contact_tile_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:paddingTop="@dimen/contact_tile_list_padding_top" />
+
+        <!--
+        <ListView
+        android:id="@+id/contact_tile_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/contact_tile_list_padding_top"
+        android:clipToPadding="false"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:divider="@color/contact_list_separator_color"
+        android:dividerHeight="1px" />
+        -->
+        <!-- Modified by wqiang for ClickFavorite_to_Contact 2012/08/03 -->
+
+        <TextView
+            android:id="@+id/contact_tile_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/empty_message_top_margin"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="?android:attr/textColorSecondary" />
+    </FrameLayout>
+
+</LinearLayout>

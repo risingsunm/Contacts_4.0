@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for history delete activity 2012/05/18 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_detail_profile_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/contact_black_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+<!-- Begin: Modified by xiepengfei for modify headview back 2012/05/22 -->
+        <RelativeLayout
+            android:id="@+id/contact_detail_history_headview"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:orientation="horizontal"
+            android:background="@drawable/call_log_list_item_bg">
+<!-- End: Modified by xiepengfei for modify headview back 2012/05/22 -->
+
+<!-- Begin: Modified by xiepengfei for modify the text size 2012/05/22 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dip"
+                android:text="@string/select_all"
+                android:textColor="@color/contact_list_separator_text_color" />
+<!-- End: Modified by xiepengfei for modify the text size 2012/05/22 -->
+
+            <CheckBox
+                android:id="@+id/contact_detail_history_check_all_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                 />
+
+        </RelativeLayout>
+
+<!-- Begin: Modified by xiepengfei for modify the select back 2012/05/22 -->
+        <ListView
+            android:id="@+id/contact_detail_profile_or_log_list"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/call_log_list_item_bg"/>
+<!-- End: Modified by xiepengfei for modify the select back 2012/05/22 -->
+
+    </LinearLayout>
+    <include layout="@layout/bottom_toolbar"/>
+</LinearLayout>
+<!-- End: Modified by xiepengfei for history delete activity 2012/05/18 -->

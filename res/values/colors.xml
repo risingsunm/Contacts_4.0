@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!--Begin: Modified by siliangqi for contacts_bg 2012-5-26-->
+    <color name="contacts_divider">#363434</color>
+    <color name="contacts_wide_divider">#df182c42</color>
+    <!--End: Modified by siliangqi for contacts_bg 2012-5-26-->
+    <!--Start of siliangqi on 2012-2-27 14:22 call_log_bg-->
+    <color name="call_log_list_item_selected">#2d5a8c</color>
+    <color name="call_log_list_item_unselected">#000000</color>
+    <!--End of siliangqi on 2012-2-27 14:22 call_log_bg-->
+    <!--Begin: Modified by siliangqi for multi_delete 2012-3-26-->
+    <color name="call_log_delete_all_normal">#414141</color>
+    <color name="clarity">#00000000</color>
+    <color name="actionbar_button_bg">#ff31b6e7</color>
+    <!--End: Modified by siliangqi for multi_delete 2012-3-26-->
+    <color name="textColorIconOverlay">#fff</color>
+    <color name="textColorIconOverlayShadow">#000</color>
+
+    <color name="shortcut_overlay_text_background">#7f000000</color>
+
+    <color name="quickcontact_list_divider">#ffcdcdcd</color>
+    <color name="quickcontact_list_background">#ffe2e2e2</color>
+    <color name="quickcontact_tab_indicator">#ff33b5e6</color>
+
+    <!-- Color of the background of the contact detail and editor pages -->
+    <color name="background_primary">#FFFFFF</color>
+
+    <color name="background_social_updates">#ffeeeeee</color>
+
+    <!-- Color used for the letter in the A-Z section header -->
+    <color name="section_header_text_color">#ff999999</color>
+
+    <!-- Color of the text in the updates tab in the tab carousel on the contact detail page -->
+    <color name="detail_update_tab_text_color">#777777</color>
+
+    <!-- Color of the text describing an unconsumed missed call. -->
+    <color name="call_log_missed_call_highlight_color">#FF0000</color>
+
+    <!-- Color of the text describing an unconsumed voicemail. -->
+    <color name="call_log_voicemail_highlight_color">#33b5e5</color>
+
+    <!-- Colour background for the voicemail playback ui. -->
+    <color name="voicemail_playback_ui_background">@android:color/black</color>
+
+    <!-- Colour of voicemail progress bar to the right of position indicator. -->
+    <color name="voicemail_playback_seek_bar_yet_to_play">#44ffffff</color>
+
+    <!-- Colour of voicemail progress bar to the left of position indicator. -->
+    <color name="voicemail_playback_seek_bar_already_played">#ccffffff</color>
+
+    <!-- Colour of text that appears on the voicemail ui. -->
+    <color name="voicemail_playback_ui_text">#cc696969</color>
+
+    <!-- Color of the theme of the People app -->
+    <color name="people_app_theme_color">#33B5E5</color>
+
+    <!-- Secondary text color in the Phone app -->
+    <color name="dialtacts_secondary_text_color">#888888</color>
+
+    <!-- Colors in the contact browser list -->
+    <color name="contact_count_text_color">#AAAAAA</color>
+
+    <!-- Color of the text of the tab carousel in the contact details  -->
+    <color name="detail_tab_carousel_tab_label_color">#EEEEEE</color>
+
+    <!-- Color of the text for buttons in the action bar  -->
+    <color name="action_bar_button_text_color">#FFFFFF</color>
+
+    <!--  Color of the status message for starred contacts in the People app -->
+    <color name="people_contact_tile_status_color">#CCCCCC</color>
+
+    <!--  Color of the semi-transparent shadow box on contact tiles -->
+    <color name="contact_tile_shadow_box_color">#7F000000</color>
+
+    <!--  Color of the vertical stripe that goes on the left of a block quote inside a stream item -->
+    <color name="stream_item_stripe_color">#CCCCCC</color>
+
+    <!-- Color of image view placeholder. -->
+    <color name="image_placeholder">#DDDDDD</color>
+    <!-- Begin: Modified by zxiaona for CallDetail_bottombutton 2012-4-1 -->
+    <color name="call_detail_bottombutton_bg">#414141</color>
+    <!-- End: Modified by zxiaona for CallDetail_bottombutton 2012-4-1 -->
+    <!-- Begin: Modified by xiepengfei for list  2012/04/11 -->
+    <color name="contact_black_color">#000000</color>
+    <color name="contact_white_color">#FFFFFF</color>
+    <color name="contact_list_separator_color">#404040</color>
+    <color name="contact_list_separator_text_color">#FFFFFF</color>
+    <color name="contact_list_separator_background_color">#192940</color>
+    <color name="contact_list_type_color">#779AB0</color>
+    <color name="contact_list_content_color">#C8C8C8</color>
+    <color name="contact_list_time_color">#666666</color>
+    <color name="contact_list_number_color">#31b6e7</color>
+    <!-- End: Modified by xiepengfei for list 2012/04/11 -->
+
+    <!-- Begin: Modified by xiepengfei for edit spinner and button 2012/05/18 -->
+    <color name="edit_button_text_color">#000000</color>
+    <!-- End: Modified by xiepengfei for edit spinner and button 2012/05/18 -->
+
+<!-- Begin: Modified by xiepengfei for add group list item color 2012/05/25 -->
+    <color name="group_list_item_lable_color">#c3c1c1</color>
+    <color name="group_list_item_count_color">#727070</color>
+    <color name="contact_tile_freque_text_color">#c3c1c1</color>
+    <color name="contact_action_bar_text_color">#e3e4e5</color>
+<!-- End: Modified by xiepengfei for add group list item color 2012/05/25 -->
+
+<!-- Begin: Modified by zxiaona for calldetail list item color 2012/06/05 -->
+    <color name="calldetail_list_item_date_color">#c4c4c4</color>
+    <color name="calldetail_list_item_duration_color">#a2a2a2</color>
+    <color name="calldetail_list_item_number_color">#31b6e7</color>
+<!-- End: Modified by zxiaona for calldetail list item color 2012/06/05 -->
+
+<!-- Begin: Modified by sunrise for NewContactsDialog 2012/07/24 -->
+    <color name="ahong_dialog_title_background">#243751</color>
+    <color name="ahong_dialog_msg_background">#F6F6F6</color>
+    <color name="ahong_dialog_cancel_background">#D7D7D7</color>
+    <color name="ahong_dialog_bottom_background">#97A0AC</color>
+<!-- Begin: Modified by sunrise for NewContactsDialog 2012/07/24 -->
+</resources>

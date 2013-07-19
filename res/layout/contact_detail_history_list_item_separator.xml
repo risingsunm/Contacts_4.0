@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for list item 2012/05/18 -->
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="1px"
+    android:background="@drawable/list_divider" />
+<!-- android:background="@color/contact_list_separator_color" -->
+<!-- End: Modified by xiepengfei for list item 2012/05/18 -->

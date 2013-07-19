@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for modify edit bg 2012/05/31 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Non focused states -->
+    <item
+        android:state_focused="false"
+        android:state_selected="false"
+        android:state_pressed="false"
+        android:drawable="@drawable/edit_editor_background_normal"/>
+    <item
+        android:state_focused="false"
+        android:state_selected="true"
+        android:state_pressed="false"
+        android:drawable="@drawable/edit_editor_background_pressed"/>
+
+    <!-- Focused states -->
+    <item
+        android:state_focused="true"
+        android:state_selected="false"
+        android:state_pressed="false"
+        android:drawable="@drawable/edit_editor_background_pressed"/>
+
+    <!-- Pressed -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/edit_editor_background_pressed"/>
+</selector>
+<!-- End: Modified by xiepengfei for modify edit bg 2012/05/31 -->

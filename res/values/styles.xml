@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2012, Code Aurora Forum. All rights reserved.
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <style name="DialtactsTheme" parent="android:Theme.Holo">
+        <item name="android:textColorSecondary">@color/dialtacts_secondary_text_color</item>
+        <!--Start of siliangqi on 2012-3-12 9:0 dial_bg-->
+        <!--
+        <item name="android:windowActionBarOverlay">true</item>
+        -->
+        <!--End of siliangqi on 2012-3-12 9:0 dial_bg-->
+        <!-- Start of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <item name="android:actionBarTabStyle">@style/ContactsActionBarTabView</item>
+        <!-- End of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <!--Begin: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
+        <item name="android:actionBarDivider">@null</item>
+        <!--End: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Start of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <item name="android:windowBackground">@color/contact_black_color</item>
+        <!-- <item name="android:windowBackground">@drawable/call_dial_panel_bg_01</item> -->
+        <!-- <item name="android:windowBackground">@drawable/background_dial_holo_dark</item> -->
+        <!-- End of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">32dip</item>
+        <!-- Begin: Modified by bxinchun 2012-07-28, change the list divider -->
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="list_item_divider">@drawable/list_bg_contact</item><!-- ?android:attr/listDivider -->
+        <!-- End: Modified by bxinchun 2012-07-28, change the list divider -->
+        <item name="list_item_padding_top">0dip</item>
+        <item name="list_item_padding_right">0dip</item>
+        <item name="list_item_padding_bottom">0dip</item>
+        <item name="list_item_padding_left">0dip</item>
+        <item name="list_item_gap_between_image_and_text">8dip</item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_call_button_padding">14dip</item>
+        <item name="list_item_vertical_divider_margin">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/contact_browser_list_item_photo_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">#729a27</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">24dip</item>
+        <item name="list_item_header_underline_height">1dip</item>
+        <item name="list_item_header_underline_color">@color/people_app_theme_color</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="contact_browser_list_padding_left">16dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <item name="contact_browser_background">@android:color/transparent</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_text_color">#FFFFFF</item>
+        <item name="call_log_primary_background_color">#000000</item>
+        <item name="call_log_secondary_text_color">#888888</item>
+        <item name="call_log_secondary_background_color">#333333</item>
+        <item name="call_log_header_color">#33b5e5</item>
+        <!-- VoicemailStatus -->
+        <item name="call_log_voicemail_status_height">48dip</item>
+        <item name="call_log_voicemail_status_background_color">#262626</item>
+        <item name="call_log_voicemail_status_text_color">#888888</item>
+        <item name="call_log_voicemail_status_action_text_color">#33b5e5</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">?android:attr/actionBarSize</item>
+    </style>
+
+    <style name="CallDetailActivityTheme" parent="android:Theme.Holo">
+        <!-- Begin: Modified by zxiaona for actionBar image 2012/06/06 -->
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <!-- End: Modified by zxiaona for actionBar image 2012/06/06 -->
+        <!-- Begin: Modified by zxiaona for actionBar text 2012/06/07 -->
+        <item name="android:actionBarStyle">@style/TitleActionBar</item>
+         <!-- End: Modified by zxiaona for actionBar text 2012/06/07 -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:gravity">top</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_text_color">#FFFFFF</item>
+        <item name="call_log_primary_background_color">#000000</item>
+        <item name="call_log_secondary_text_color">#FFFFFF</item>
+        <item name="call_log_secondary_background_color">#333333</item>
+        <item name="call_log_header_color">#33b5e5</item>
+        <!-- VoicemailStatus -->
+        <item name="call_log_voicemail_status_height">48dip</item>
+        <item name="call_log_voicemail_status_background_color">#262626</item>
+        <item name="call_log_voicemail_status_text_color">#888888</item>
+        <item name="call_log_voicemail_status_action_text_color">#33b5e5</item>
+    </style>
+    <!-- Begin: Modified by zxiaona for actionBar text 2012/06/07 -->
+    <style name="TitleActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/DetailActionBarTextSytle</item>
+    </style>
+    <style name="DetailActionBarTextSytle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">21dip</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!-- End: Modified by zxiaona for actionBar text 2012/06/07 -->
+    <!-- Begin: Modified by xiepengfei for modify action bar style 2012/04/19 -->
+    <style name="ContactDetailActivityTheme" parent="@style/DialtactsTheme">
+        <item name="android:actionBarStyle">@style/ContactsDetailActionBarStyle</item>
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <item name="android:textColorPrimary">@color/contact_action_bar_text_color</item>
+        <item name="android:textColorSecondary">@color/contact_action_bar_text_color</item>
+        <item name="android:textSize">21dip</item>
+        <item name="android:actionBarTabStyle">@style/ContactsDetailActionBarTabView</item>
+        <item name="android:actionBarTabTextStyle">@style/ContactsDetailAcionBarTabTextStyle</item>
+    </style>
+    <style name="ContactsDetailActionBarTabView" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/detail_action_bar_tab</item>
+    </style>
+    <style name="ContactsDetailAcionBarTabTextStyle">
+        <item name="android:textColor">@color/contact_action_bar_text_color</item>
+        <item name="android:textSize">26px</item>
+    </style>
+    <!-- End: Modified by xiepengfei for modify action bar style 2012/04/19 -->
+
+    <style name="DetailActivityTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <item name="android:actionBarWidgetTheme">@style/ContactsActionBarTheme</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+    </style>
+
+    <!-- Begin: Modified by xiepengfei for modify editor activity action bar style 2012/04/21 -->
+    <style name="ContactsEditorActionBarStyle" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:background">@drawable/ic_actionbar_bg</item>
+        <item name="android:backgroundSplit">@drawable/ic_actionbar_bg</item>
+        <item name="android:backgroundStacked">@drawable/ab_solid_custom_blue_inverse_holo</item>
+        <item name="android:height">48dp</item>
+        <item name="android:displayOptions"></item>
+        <item name="android:titleTextStyle">@style/DetailActionBarTextSytle</item>
+    </style>
+    <!-- End: Modified by xiepengfei for modify editor activity action bar style 2012/04/21 -->
+
+<!-- Begin: Modified by xiepengfei for modify editor activity action bar style 2012/04/21 -->
+    <style name="EditorActivityTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item> -->
+        <item name="android:actionBarStyle">@style/ContactsEditorActionBarStyle</item>
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <item name="android:actionBarWidgetTheme">@style/ContactsActionBarTheme</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- <item name="android:textColorPrimary">@color/primary_text_color</item> -->
+        <item name="android:textColorPrimary">@color/contact_action_bar_text_color</item>
+        <!-- <item name="android:textColorSecondary">@color/secondary_text_color</item> -->
+        <item name="android:textColorSecondary">@color/contact_action_bar_text_color</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+    </style>
+<!-- End: Modified by xiepengfei for modify editor activity action bar style 2012/04/21 -->
+
+    <style name="BackgroundOnlyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowNoDisplay">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Theme">
+    </style>
+
+    <style name="Theme.QuickContact" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+    </style>
+
+    <style name="PeopleTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
+        <!--Begin: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <item name="android:actionBarDivider">@null</item>
+        <!--End: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <!-- Start of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <item name="android:windowBackground">@color/contact_black_color</item>
+        <!-- <item name="android:windowBackground">@drawable/call_dial_panel_bg_01</item> -->
+        <!-- End of wangqiang on 2012-3-6 13:58 contacts_and_daialer_actionbar-->
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <item name="android:actionBarWidgetTheme">@style/ContactsActionBarTheme</item>
+        <item name="android:actionBarTabStyle">@style/ContactsActionBarTabView</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">24dip</item>
+        <!-- Begin: Modified by bxinchun 2012-07-28, change the list divider -->
+        <item name="list_item_divider">@drawable/list_bg_contact</item><!-- ?android:attr/listDivider -->
+        <!-- End: Modified by bxinchun 2012-07-28, change the list divider -->
+        <item name="list_item_padding_top">0dip</item>
+        <item name="list_item_padding_right">0dip</item>
+        <item name="list_item_padding_bottom">0dip</item>
+        <item name="list_item_padding_left">0dip</item>
+        <item name="list_item_gap_between_image_and_text">8dip</item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_call_button_padding">14dip</item>
+        <item name="list_item_vertical_divider_margin">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/contact_browser_list_item_photo_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">#99cc00</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">26dip</item>
+        <item name="list_item_header_underline_height">1dip</item>
+        <item name="list_item_header_underline_color">@color/people_app_theme_color</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="list_item_contacts_count_text_color">@color/contact_count_text_color</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="contact_browser_list_padding_left">16dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <item name="contact_browser_background">@android:color/transparent</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <item name="list_item_contacts_count_text_size">12sp</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">0dip</item>
+    </style>
+
+    <!-- Begin: Modified by xiepengfei for modify action bar style 2012/04/19 -->
+    <style name="ContactsDetailActionBarStyle" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- Begin: Modified by xiepengfei for modify actionbar back 2012/05/23 -->
+        <!-- <item name="android:background">@drawable/ab_solid_custom_blue_inverse_holo</item> -->
+                <item name="android:background">@drawable/ic_actionbar_bg</item>
+        <!-- End: Modified by xiepengfei for modify actionbar back 2012/05/23 -->
+        <item name="android:backgroundSplit">@drawable/ab_bottom_opaque_dark_holo</item>
+        <item name="android:backgroundStacked">@drawable/ic_actionbar_bg</item>
+        <item name="android:height">48dp</item>
+        <item name="android:displayOptions"></item>
+    </style>
+    <!-- End: Modified by xiepengfei for modify action bar style 2012/04/19 -->
+
+    <style name="ContactsActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <!-- Begin: Modified by xiepengfei for modify the actionbar bg 2012/05/29 -->
+        <item name="android:background">@color/contact_black_color</item>
+        <!-- <item name="android:background">@drawable/ab_solid_custom_blue_inverse_holo</item> -->
+        <!-- End: Modified by xiepengfei for modify the actionbar bg 2012/05/29 -->
+        <!-- Start of wangqiang on 2012-3-6 13:59 contacts_and_daialer_actionbar-->
+        <item name="android:backgroundSplit">@drawable/ab_bottom_opaque_dark_holo</item>
+        <!--Begin: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <item name="android:backgroundStacked">@drawable/actionbar_tab_bg</item>
+        <!--End: Modified by siliangqi for actionbar divider 2012-7-13-->
+        <!-- <item name="android:backgroundStacked">@drawable/ab_solid_custom_blue_inverse_holo</item> -->
+        <item name="android:height">64dp</item>
+        <!-- End of wangqiang on 2012-3-6 13:59 contacts_and_daialer_actionbar-->
+        <item name="android:displayOptions"></item>
+    </style>
+
+    <style name="ContactsActionBarTheme" parent="@android:style/Theme.Holo">
+        <item name="android:textColorHint">#CCCCCC</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/ListViewDropdownStyle</item>
+    </style>
+
+    <style name="ContactsActionBarTabView" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/action_bar_tab</item>
+        <!--Begin: Modified by siliangqi for actionbar_font 2012-6-8-->
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+        <!--End: Modified by siliangqi for actionbar_font 2012-6-8-->
+    </style>
+
+    <style name="ListViewDropdownStyle" parent="@android:style/Widget.ListView.DropDown">
+        <item name="android:listSelector">?android:attr/listChoiceBackgroundIndicator</item>
+    </style>
+
+    <style name="ListViewStyle" parent="@android:style/Widget.Holo.Light.ListView">
+        <item name="android:overScrollMode">always</item>
+    </style>
+
+    <!--Begin: Modified by siliangqi for 1lev_search 2012-7-7-->
+    <style name="ContactPickerTheme" parent="@style/PeopleTheme">
+    <item name="android:actionBarStyle">@style/ContactPickerActionBarStyle</item>
+    </style>
+    <style name="ContactPickerActionBarStyle" parent="ContactsDetailActionBarStyle">
+        <item name="android:titleTextStyle">@style/DetailActionBarTextSytle</item>
+    </style>
+    <!--End: Modified by siliangqi for 1lev_search 2012-7-7-->
+    <style name="ContactPickerLayout" parent="ContactPickerTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="JoinContactActivityTheme" parent="ContactPickerTheme" >
+    <!--Begin: Modified by siliangqi for unit_contact 2011-6-6-->
+    <item name="android:actionBarStyle">@style/ContactsEditorActionBarStyle</item>
+    <!--End: Modified by siliangqi for unit_contact 2011-6-6-->
+    </style>
+
+    <style name="ContactsPreferencesTheme" parent="@android:Theme.Holo.Light">
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+    </style>
+    <!--Begin: Modified by siliangqi for display_contact 2011-6-6-->
+    <style name="ContactListFilterTheme" parent="@android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <!--End: Modified by siliangqi for display_contact 2011-6-6-->
+    </style>
+
+    <style name="CustomContactListFilterView" parent="ContactListFilterTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="DirectoryHeader" parent="PeopleTheme">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="NonPhoneActivityTheme" parent="@android:Theme.Translucent.NoTitleBar">
+    </style>
+
+    <style name="NonPhoneDialogTheme" parent="@android:Theme.Holo.Light.Dialog">
+    </style>
+
+    <!-- Begin: Modified by wqiang for modified_clicking_quickcontact_in_add_contact 2012/08/16 -->
+    <!-- <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog.MinWidth">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style> -->
+    <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <!-- End: Modified by wqiang for modified_clicking_quickcontact_in_add_contact 2012/08/16 -->
+
+    <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+    </style>
+
+    <style name="SectionDivider">
+        <item name="android:background">#7e7e87</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ContactDetailItemType">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="DialtactsDigitsTextAppearance">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textSize">@dimen/dialpad_digits_text_size</item>
+        <item name="android:freezesText">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:editable">true</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:layout_weight">0</item>
+    </style>
+
+    <!--Start of siliangqi on 2012-3-12 10:32 dial_bg-->
+    <!--
+    <style name="DialtactsDialpadButtonStyle">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+    -->
+    <style name="DialtactsDialpadButtonStyle">
+
+        <item name="android:layout_width">99dip</item>
+        <item name="android:layout_height">55dip</item>
+        <item name="android:background">@drawable/call_dial_btn_bg</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+    <style name="DialtactsDialpadButtonStyle1">
+        <item name="android:layout_width">73dip</item>
+        <item name="android:layout_height">55dip</item>
+        <item name="android:background">@drawable/call_dial_btn_bg1</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+    <!--End of siliangqi on 2012-3-12 10:32 dial_bg-->
+
+    <style name="ConfirmAddDetailViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ConfirmAddDetailHeaderViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dip</item>
+    </style>
+
+    <style name="DialtactsActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:backgroundSplit">@null</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_opaque_dark_holo</item>
+        <!-- Start of wangqiang on 2012-3-6 13:59 contacts_and_daialer_actionbar-->
+        <item name="android:height">64dp</item>
+        <item name="android:background">@color/contact_black_color</item>
+        <!-- End of wangqiang on 2012-3-6 13:59 contacts_and_daialer_actionbar-->
+        <item name="android:displayOptions"></item>
+    </style>
+
+    <style name="QuickContactListItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="QuickContactListItemTextWrapperStyle">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="QuickContactListBottomStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dip</item>
+        <item name="android:background">@color/quickcontact_tab_indicator</item>
+    </style>
+
+    <!--Begin: Modified by xiepengfei for text  style 2012/04/20 -->
+    <style name="DetailTypeTextStyle">
+        <item name="android:textSize">22px</item>
+        <item name="android:textColor">@color/contact_list_type_color</item>
+    </style>
+    <style name="DetailDataTextStyle">
+        <item name="android:textSize">28px</item>
+        <item name="android:textColor">@color/contact_list_content_color</item>
+    </style>
+    <!-- End: Modified by xiepengfei for text  style 2012/04/20 -->
+
+
+    <style name="GroupMembershipSizeTextAppearance" parent="@android:style/TextAppearance.Small"/>
+
+    <!-- TextView style with blue underline. It is most suitable for headers.
+
+         This is similar to ?android:attr/listSeparatorTextView but uses different
+         background and text color. See also android:style/Widget.Holo.TextView.ListSeparator
+         (which is private, so we cannot specify it as a parent style).  -->
+    <style name="ContactListSeparatorTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- See comments for @dimen/list_section_divider_min_height -->
+        <item name="android:minHeight">@dimen/list_section_divider_min_height</item>
+        <item name="android:background">@drawable/list_section_divider_holo_custom</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/people_app_theme_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="call_log_tab_bottom">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:maxLines">0</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:background">@drawable/call_log_background</item>
+    </style>
+    <!-- Begin: Modified by zxiaona for CallDetail 2012-3-27 -->
+      <style name="CallDetailButton">
+        <item name="android:layout_width">79dip</item>
+        <item name="android:layout_height">73dip</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!--End: Modified by zxiaona for CallDetail 2012-3-27 -->
+     <!--Begin: Modified by zxiaona for CallDetail_bottomButton 2012-4-23 -->
+      <style name="CallDetailBottomButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dip</item>
+        <item name="android:layout_marginBottom">3dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">24px</item>
+        <item name="android:background">@drawable/call_detail_bottom_button</item>
+    </style>
+    <!--End: Modified by zxiaona for CallDetail_bottomButton 2012-4-23 -->
+
+<!-- Begin: Modified by xiepengfei for add actionbar tab lable sytle 2012/05/25 -->
+    <style name="actionbar_tab_text_style">
+        <item name="android:textSize">24px</item>
+        <item name="android:textColor">#a0a0a0</item>
+    </style>
+<!-- End: Modified by xiepengfei for add actionbar tab lable sytle 2012/05/25 -->
+    <!--Begin: Modified by siliangqi for associate_dial 2012-6-1-->
+    <style name="MyDialogStyle" parent="@android:style/Theme.Dialog">
+    <item name="android:windowTitleStyle">@style/MyDialogWindowTitle</item>
+    </style>
+    <style name="MyDialogWindowTitle">
+    <item name="android:textAppearance">@style/MyDialogWindowTitle</item>
+    </style>
+    <style name="MyDialogWindowTitle">
+    <item name="android:textSize">21dip</item>
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:layout_marginLeft">7dip</item>
+    <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--End: Modified by siliangqi for associate_dial 2012-6-1-->
+</resources>

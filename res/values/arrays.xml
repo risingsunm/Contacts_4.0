@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Begin: Modified by siliangqi for wordindex 2012-5-4-->
+    <string-array name="planets">
+        <item>Phone</item>
+        <item>SIM</item>
+    </string-array>
+    <string-array name="blade_full_sections">
+        <item>#</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="blade_replaced_sections">
+        <item>#</item>
+        <item>A</item>
+        <item>-</item>
+        <item>C</item>
+        <item>-</item>
+        <item>E</item>
+        <item>-</item>
+        <item>G</item>
+        <item>-</item>
+        <item>I</item>
+        <item>-</item>
+        <item>K</item>
+        <item>-</item>
+        <item>M</item>
+        <item>-</item>
+        <item>O</item>
+        <item>-</item>
+        <item>Q</item>
+        <item>-</item>
+        <item>S</item>
+        <item>-</item>
+        <item>U</item>
+        <item>-</item>
+        <item>W</item>
+        <item>-</item>
+        <item>Y</item>
+        <item>-</item>
+    </string-array>
+
+    <integer-array name="blade_section_baselines">
+        <item>29</item>
+        <item>53</item>
+        <item>77</item>
+        <item>101</item>
+        <item>125</item>
+        <item>149</item>
+        <item>173</item>
+        <item>197</item>
+        <item>221</item>
+        <item>245</item>
+        <item>269</item>
+        <item>293</item>
+        <item>317</item>
+        <item>341</item>
+        <item>365</item>
+        <item>389</item>
+        <item>413</item>
+        <item>437</item>
+        <item>461</item>
+        <item>485</item>
+        <item>509</item>
+        <item>533</item>
+        <item>557</item>
+        <item>581</item>
+        <item>605</item>
+        <item>629</item>
+        <item>653</item>
+    </integer-array>
+    <integer-array name="blade_indicator_tops">
+        <item>8</item>
+        <item>32</item>
+        <item>56</item>
+        <item>80</item>
+        <item>104</item>
+        <item>128</item>
+        <item>152</item>
+        <item>176</item>
+        <item>200</item>
+        <item>224</item>
+        <item>248</item>
+        <item>272</item>
+        <item>296</item>
+        <item>320</item>
+        <item>344</item>
+        <item>368</item>
+        <item>392</item>
+        <item>416</item>
+        <item>440</item>
+        <item>464</item>
+        <item>488</item>
+        <item>512</item>
+        <item>536</item>
+        <item>560</item>
+        <item>584</item>
+        <item>608</item>
+        <item>632</item>
+    </integer-array>
+<!--End: Modified by siliangqi for wordindex 2012-5-4-->
+
+
+<!-- Begin: Modified by xiepengfei for add calls view by 2012/05/26 -->
+<string-array name="calls_view_by">
+        <item>All calls</item>
+        <item>All received calls</item>
+        <item>All Dialed calls</item>
+        <item>All missed calls</item>
+
+        <item>All GSM network calls</item>
+        <item>GSM network received calls</item>
+        <item>GSM network Dialed calls</item>
+        <item>GSM network missed calls</item>
+
+        <item>All CDMA network calls</item>
+        <item>CDMA network received calls</item>
+        <item>CDMA network Dialed calls</item>
+        <item>CDMA network missed calls</item>
+    </string-array>
+<!-- End: Modified by xiepengfei for add calls view by 2012/05/26 -->
+
+</resources>

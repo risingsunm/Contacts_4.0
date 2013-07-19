@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for history delete activity 2012/05/18 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="480px"
+    android:layout_height="20px"
+    android:background="#555555"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/contact_detail_call_log_item_textview_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:textColor="@color/section_header_text_color"
+        android:textSize="20px" />
+
+</RelativeLayout>
+<!-- End: Modified by xiepengfei for history delete activity 2012/05/18 -->

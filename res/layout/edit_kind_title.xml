@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright 2011, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!-- Begin: Modified by xiepengfei for modify layout 2012/04/27 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:focusable="false" >
+
+    <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/kind_title"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:ellipsize="end"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textColor="@color/people_app_theme_color" />
+    </LinearLayout> -->
+
+    <TextView
+        android:id="@+id/kind_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:ellipsize="end"
+        android:paddingTop="8dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@color/contact_white_color" />
+
+</FrameLayout><!--
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dip"
+    android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    android:focusable="false">
+
+    <TextView
+        android:id="@+id/kind_title"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:background="@drawable/list_section_divider_holo_custom"
+        android:textColor="@color/people_app_theme_color"
+        android:textAllCaps="true"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+</FrameLayout>
+-->
+
+<!-- End: Modified by xiepengfei for modify layout 2012/04/27 -->

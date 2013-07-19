@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for delete menu 2012/03/28 -->
+<!-- <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_contact_detail_delete_complete"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_menu_complete"
+        android:title="@string/complete"></item>
+    <item android:id="@+id/menu_contact_detail_delete_cancel"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_menu_cancel"
+        android:title="@string/cancel"></item>
+</menu> -->
+<!-- End: Modified by xiepengfei for delete menu 2012/03/28 -->
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"></menu>

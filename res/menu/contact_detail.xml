@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for copy to dialling screen 2012/03/28 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_copy_to_dialling_screen"
+        android:icon="@drawable/edit_query"
+        android:title="@string/menu_contact_detail_copy_to_dialling_screen"/>
+    <item
+        android:id="@+id/menu_share_info"
+        android:icon="@drawable/ic_menu_share_holo_light"
+        android:title="@string/menu_share"/>
+    <!-- <item
+        android:id="@+id/menu_contact_detail_complete"
+        android:showAsAction="always"
+        android:title="@string/complete">
+    </item>
+    <item
+        android:id="@+id/menu_contact_detail_cancel"
+        android:showAsAction="always"
+        android:title="@string/cancel">
+    </item> -->
+    <item
+        android:id="@+id/menu_contact_detail_send_info_sms"
+        android:icon="@drawable/ic_menu_send_contact_info"
+        android:title="@string/contact_detail_menu_send_info_sms"/>
+    <item
+        android:id="@+id/menu_contact_detail_default_number_set"
+        android:icon="@drawable/ic_menu_set_default_phone"
+        android:title="@string/contact_detail_menu_set_default_phone_number"/>
+</menu>
+<!-- End: Modified by xiepengfei for copy to dialling screen 2012/03/28 -->

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: Modified by xiepengfei for add bottom toolbar layout 2012/06/01 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/calldetail_button_bg"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="156dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginTop="3dip"
+        android:background="@drawable/btn_delete"
+        android:text="@string/btn_ok"
+        android:paddingTop="4dip"
+        android:textSize="28px"
+        android:textColor="@color/contact_black_color" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="156dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginTop="3dip"
+        android:paddingTop="4dip"
+        android:background="@drawable/btn_delete"
+        android:text="@string/btn_cancel"
+        android:textSize="28px"
+        android:textColor="@color/contact_black_color" />
+
+</LinearLayout>
+<!-- End: Modified by xiepengfei for add bottom toolbar layout 2012/06/01 -->

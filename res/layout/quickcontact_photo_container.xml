@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+-->
+<!-- bxinchun Modified the file, 2012-07-25. Changed the layout, divider the layout to two parts. -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#4CFFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/photo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="217px"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:id="@+id/photo_text_bar"
+                    android:layout_width="0dip"
+                    android:layout_height="42dip"
+                    android:layout_alignBottom="@id/photo"
+                    android:layout_alignLeft="@id/photo"
+                    android:layout_alignRight="@id/photo"
+                    android:background="#7F000000"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/quick_contact_detail_bg" >
+
+                <ImageButton
+                    android:id="@+id/open_details_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginRight="16dip"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_contacts_holo_dark"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/open_details_button"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dip"
+                    android:maxLines="2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/open_details_push_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="@string/viewContactDesription" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>
